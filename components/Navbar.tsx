@@ -76,17 +76,17 @@ export default function Navbar() {
     return (
         <header className="fixed inset-x-0 top-0 z-50 px-4">
             <nav
-                className={`mx-auto mt-4 flex max-w-7xl items-center gap-4 rounded-2xl border px-5 py-3 transition-all duration-300 ${scrolled
+                className={`mx-auto mt-4 flex max-w-7xl items-center gap-2.5 rounded-2xl border px-3 py-3 transition-all duration-300 sm:gap-4 sm:px-5 ${scrolled
                     ? "border-sky-100 bg-white/90 shadow-lg shadow-sky-100/60 backdrop-blur-xl"
                     : "border-white/60 bg-white/60 backdrop-blur-md"
                     }`}
             >
                 {/* Logo */}
-                <a href="/" className="flex shrink-0 items-center gap-2.5">
+                <a href="/" className="flex shrink-0 items-center gap-2 sm:gap-2.5">
                     <span className="grid size-9 place-items-center rounded-xl bg-linear-to-br from-sky-400 to-blue-600 shadow-lg shadow-sky-200">
                         <ShoppingBag className="size-5 text-white" />
                     </span>
-                    <span className="text-xl font-extrabold tracking-tight text-slate-900">
+                    <span className="text-lg font-extrabold tracking-tight text-slate-900 sm:text-xl">
                         Shop<span className="bg-linear-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">Verse</span>
                     </span>
                 </a>
@@ -124,12 +124,12 @@ export default function Navbar() {
                 </form>
 
                 {/* Actions */}
-                <div className="ml-auto flex shrink-0 items-center gap-3">
+                <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
                     {/* ❤️ Wishlist */}
                     <button
                         onClick={openWishlist}
                         aria-label="Open wishlist"
-                        className="group relative grid size-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:border-rose-200 hover:bg-rose-50/50 hover:text-rose-500"
+                        className="group relative grid size-9 place-items-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:border-rose-200 hover:bg-rose-50/50 hover:text-rose-500 sm:size-10"
                     >
                         <Heart className="size-5 transition-transform duration-300 group-hover:scale-110" />
                         {wishlist.length > 0 && (
@@ -143,7 +143,7 @@ export default function Navbar() {
                     <button
                         onClick={openCart}
                         aria-label="Open cart"
-                        className="group relative grid size-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:border-sky-200 hover:bg-sky-50/50 hover:text-sky-600"
+                        className="group relative grid size-9 place-items-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:border-sky-200 hover:bg-sky-50/50 hover:text-sky-600 sm:size-10"
                     >
                         <ShoppingCart className="size-5 transition-transform duration-300 group-hover:scale-110" />
                         {cartCount > 0 && (
@@ -155,7 +155,7 @@ export default function Navbar() {
 
                     <a
                         href="/signin"
-                        className="hidden rounded-xl bg-linear-to-r from-sky-500 to-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-200 transition hover:brightness-110 lg:block"
+                        className="rounded-xl bg-linear-to-r from-sky-500 to-blue-600 px-3 py-2 text-xs font-bold whitespace-nowrap text-white shadow-lg shadow-sky-200 transition hover:brightness-110 sm:px-5 sm:py-2.5 sm:text-sm sm:font-semibold"
                     >
                         Sign In
                     </a>
@@ -163,7 +163,7 @@ export default function Navbar() {
                     <button
                         aria-label="Menu"
                         onClick={() => setOpen(!open)}
-                        className="grid size-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm md:hidden"
+                        className="grid size-9 place-items-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm md:hidden sm:size-10"
                     >
                         {open ? <X className="size-5" /> : <Menu className="size-5" />}
                     </button>
@@ -196,6 +196,13 @@ export default function Navbar() {
                             );
                         })}
                     </ul>
+                    <a
+                        href="/signin"
+                        onClick={() => setOpen(false)}
+                        className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-sky-500 to-blue-600 px-4 py-3 text-sm font-bold text-white shadow-md shadow-sky-200 transition hover:brightness-110"
+                    >
+                        Sign In
+                    </a>
                 </div>
             )}
         </header>

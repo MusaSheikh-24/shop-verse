@@ -80,12 +80,12 @@ export default function PromoBanner() {
                     </div>
 
                     {/* 🏷️ Discount stickers */}
-                    <div className="absolute right-8 top-6 grid size-24 rotate-12 place-items-center rounded-full bg-amber-400 shadow-xl shadow-amber-500/40">
+                    <div className="absolute right-6 top-6 hidden size-24 rotate-12 place-items-center rounded-full bg-amber-400 shadow-xl shadow-amber-500/40 sm:grid md:right-8">
                         <div className="grid size-20 place-items-center rounded-full border-2 border-dashed border-amber-700/40">
                             <p className="text-sm font-black leading-tight text-amber-900">50%<br />OFF</p>
                         </div>
                     </div>
-                    <div className="absolute bottom-8 left-8 grid size-16 -rotate-12 place-items-center rounded-full bg-white/15 backdrop-blur">
+                    <div className="absolute bottom-8 left-8 hidden size-16 -rotate-12 place-items-center rounded-full bg-white/15 backdrop-blur md:grid">
                         <p className="text-[10px] font-black uppercase tracking-wider">Mega<br />Sale</p>
                     </div>
 
@@ -119,10 +119,10 @@ export default function PromoBanner() {
                         </button>
 
                         {/* Countdown */}
-                        <div className="mt-8 flex items-center justify-center gap-3 sm:gap-4">
+                        <div className="mt-8 flex items-center justify-center gap-2 sm:gap-4">
                             {blocks.map((b) => (
-                                <div key={b.label} className="w-20 rounded-2xl border border-white/20 bg-white/10 py-3 backdrop-blur transition hover:bg-white/15">
-                                    <p className="text-2xl font-extrabold tabular-nums">{b.value}</p>
+                                <div key={b.label} className="w-16 rounded-2xl border border-white/20 bg-white/10 py-3 backdrop-blur transition hover:bg-white/15 sm:w-20">
+                                    <p className="text-xl font-extrabold tabular-nums sm:text-2xl">{b.value}</p>
                                     <p className="text-[10px] font-semibold uppercase tracking-widest text-sky-100">{b.label}</p>
                                 </div>
                             ))}

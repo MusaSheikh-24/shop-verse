@@ -144,7 +144,7 @@ export default function FeaturedProducts() {
                                             e.preventDefault();
                                             addToCart(p);
                                         }}
-                                        className="absolute bottom-3 right-3 grid size-12 translate-y-3 cursor-pointer place-items-center rounded-full bg-linear-to-r from-sky-500 to-blue-600 text-white opacity-0 shadow-xl shadow-sky-300 transition-all duration-300 hover:scale-110 active:scale-95 group-hover:translate-y-0 group-hover:opacity-100"
+                                        className="absolute bottom-3 right-3 grid size-12 translate-y-0 cursor-pointer place-items-center rounded-full bg-linear-to-r from-sky-500 to-blue-600 text-white opacity-100 shadow-xl shadow-sky-300 transition-all duration-300 hover:scale-110 active:scale-95 lg:translate-y-3 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100"
                                     >
                                         <Plus className="size-5" />
                                     </button>

@@ -83,13 +83,13 @@ export default function Hero() {
 
             <div className="relative mx-auto max-w-7xl">
                 {/* ===== Hero Card ===== */}
-                <div className="relative rounded-[2.5rem] border-2 border-sky-100 bg-linear-to-br from-white via-sky-50 to-blue-100/80 px-8 pb-14 pt-12 shadow-[0_30px_80px_-20px_rgba(2,132,199,0.4)] sm:px-14">
+                <div className="relative rounded-[2.5rem] border-2 border-sky-100 bg-linear-to-br from-white via-sky-50 to-blue-100/80 px-5 pb-12 pt-10 shadow-[0_30px_80px_-20px_rgba(2,132,199,0.4)] sm:px-8 sm:pb-14 sm:pt-12 lg:px-14">
                     <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[2.5rem]">
                         <div className="absolute -right-20 -top-20 size-72 rounded-full bg-sky-200/60 blur-3xl" />
                         <div className="absolute -bottom-24 left-1/4 size-72 rounded-full bg-cyan-100/60 blur-3xl" />
                     </div>
 
-                    <div className="relative grid items-center gap-12 lg:grid-cols-2">
+                    <div className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
                         {/* Left */}
                         <div>
                             {/* ✨ IMPROVED — tighter badge copy */}
@@ -98,7 +98,7 @@ export default function Hero() {
                                 Welcome to ShopVerse — Your Tech Paradise
                             </span>
 
-                            <h1 className="mt-6 animate-[fade-up_0.7s_ease-out_both] text-4xl font-black leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl" style={{ animationDelay: "0.1s" }}>
+                            <h1 className="mt-6 animate-[fade-up_0.7s_ease-out_both] text-[2rem] font-black leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl" style={{ animationDelay: "0.1s" }}>
                                 Discover the Future of{" "}
                                 <span className="bg-linear-to-r from-sky-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent">Online Shopping</span>
                             </h1>
@@ -133,19 +133,19 @@ export default function Hero() {
 
                         {/* Right — main image */}
                         <div className="relative mx-auto w-fit animate-[fade-up_0.8s_ease-out_both] lg:-translate-y-10" style={{ animationDelay: "0.25s" }}>
-                            <div className="absolute -inset-8 animate-pulse rounded-full bg-linear-to-br from-sky-300/70 to-blue-300/70 blur-3xl" />
+                            <div className="absolute -inset-6 animate-pulse rounded-full bg-linear-to-br from-sky-300/70 to-blue-300/70 blur-3xl sm:-inset-8" />
                             <div className="relative animate-float">
                                 <img
                                     src="https://images.unsplash.com/photo-1548611716-f156c633d514?w=500&auto=format&fit=crop&q=60"
                                     alt="Glide Laptop Air"
-                                    className="size-72 rounded-[2.5rem] object-cover shadow-[0_35px_70px_-15px_rgba(2,132,199,0.55)] ring-8 ring-white/80 sm:size-96"
+                                    className="size-56 rounded-[2rem] object-cover shadow-[0_35px_70px_-15px_rgba(2,132,199,0.55)] ring-8 ring-white/80 sm:size-72 sm:rounded-[2.5rem] md:size-96"
                                 />
                             </div>
-                            <div className="absolute -left-8 top-8 animate-float-slow rounded-2xl border border-sky-100 bg-white/90 px-4 py-3 shadow-[0_15px_35px_-10px_rgba(2,132,199,0.4)] backdrop-blur">
+                            <div className="absolute -left-2 top-6 animate-float-slow rounded-2xl border border-sky-100 bg-white/90 px-3 py-2.5 shadow-[0_15px_35px_-10px_rgba(2,132,199,0.4)] backdrop-blur sm:-left-8 sm:top-8 sm:px-4 sm:py-3">
                                 <p className="text-xs text-slate-500">Glide Laptop Air</p>
                                 <p className="bg-linear-to-r from-sky-600 to-blue-600 bg-clip-text font-extrabold text-transparent">$1,299.00</p>
                             </div>
-                            <div className="absolute -right-4 bottom-8 animate-float rounded-2xl border border-sky-100 bg-white/90 px-4 py-3 shadow-[0_15px_35px_-10px_rgba(2,132,199,0.4)] backdrop-blur">
+                            <div className="absolute -right-2 bottom-8 animate-float rounded-2xl border border-sky-100 bg-white/90 px-3 py-2.5 shadow-[0_15px_35px_-10px_rgba(2,132,199,0.4)] backdrop-blur sm:-right-4 sm:px-4 sm:py-3">
                                 <p className="flex items-center gap-1 text-sm font-semibold text-emerald-500">
                                     <BadgeCheck className="size-4" /> In Stock
                                 </p>

@@ -16,7 +16,7 @@ export default function SignInPage() {
             <div className="pointer-events-none absolute -right-32 top-1/3 size-96 rounded-full bg-sky-500/10 blur-3xl" />
 
             {/* ===== LEFT — gradient panel ===== */}
-            <div className="relative overflow-hidden bg-linear-to-br from-sky-500 via-blue-700 to-indigo-950 px-6 pb-24 pt-28 sm:px-12 lg:absolute lg:inset-y-0 lg:left-0 lg:flex lg:w-[58%] lg:items-center lg:px-16 lg:py-8">
+            <div className="relative overflow-hidden bg-linear-to-br from-sky-500 via-blue-700 to-indigo-950 px-6 pb-28 pt-28 sm:px-12 lg:absolute lg:inset-y-0 lg:left-0 lg:flex lg:w-[58%] lg:items-center lg:px-16 lg:py-8">
                 {/* Decor */}
                 <div className="pointer-events-none absolute inset-0">
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.06)_1px,transparent_1px)] bg-size-[56px_56px]" />
@@ -25,7 +25,7 @@ export default function SignInPage() {
                 </div>
 
                 {/* Top row: logo + back */}
-                <div className="absolute inset-x-6 top-6 flex items-center justify-between sm:inset-x-12 lg:inset-x-16">
+                <div className="absolute inset-x-4 top-5 flex items-center justify-between sm:inset-x-12 sm:top-6 lg:inset-x-16">
                     <Link href="/" className="flex items-center gap-2">
                         <span className="grid size-9 place-items-center rounded-lg bg-white/15 backdrop-blur">
                             <ShoppingBag className="size-4 text-white" />
@@ -36,14 +36,14 @@ export default function SignInPage() {
                     </Link>
                     <Link
                         href="/"
-                        className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold text-white backdrop-blur transition hover:bg-white/20"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur transition hover:bg-white/20"
                     >
-                        <ArrowLeft className="size-3.5" /> Back to website
+                        <ArrowLeft className="size-3.5" /> Back
                     </Link>
                 </div>
 
                 {/* Heading + paragraph */}
-                <div className="relative max-w-xl">
+                <div className="relative max-w-xl pt-6">
                     <h1 className="text-4xl font-black leading-tight text-white sm:text-5xl">
                         Discover the Future of Online Shopping
                     </h1>
@@ -54,13 +54,13 @@ export default function SignInPage() {
                 </div>
             </div>
 
-            {/* ===== CARD — ✅ FIXED spacing (signup jaisa) ===== */}
-            <div className="relative z-10 mx-auto -mt-12 w-full max-w-md px-4 pb-16 scrollbar-none lg:absolute lg:inset-y-0 lg:left-[58%] lg:mx-0 lg:flex lg:w-[440px] lg:-translate-x-10 lg:items-center lg:overflow-y-auto lg:px-0 lg:py-8 lg:pb-8">
+            {/* ===== CARD — responsive, proper spacing on all screens ===== */}
+            <div className="relative z-10 mx-auto w-full max-w-md px-4 pb-16 pt-4 scrollbar-none lg:absolute lg:inset-y-0 lg:left-[58%] lg:mx-0 lg:flex lg:w-[440px] lg:-translate-x-10 lg:items-center lg:overflow-y-auto lg:px-0 lg:py-8 lg:pb-8 lg:pt-8">
                 <div className="relative w-full">
                     {/* Glow behind card */}
                     <div className="absolute -inset-2 rounded-[2rem] bg-sky-500/20 blur-2xl" />
 
-                    <div className="relative rounded-3xl border border-white/10 bg-slate-900/90 p-8 backdrop-blur-xl">
+                    <div className="relative rounded-3xl border border-white/10 bg-slate-900/90 p-6 backdrop-blur-xl sm:p-8">
                         <p className="text-center text-[11px] font-bold uppercase tracking-[0.35em] text-sky-400">
                             Sign In
                         </p>
@@ -89,7 +89,7 @@ export default function SignInPage() {
                                 </button>
                             </div>
 
-                            <div className="flex items-center justify-between text-xs">
+                            <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs">
                                 <label className="flex items-center gap-2 text-slate-400">
                                     <input type="checkbox" className="size-4 cursor-pointer accent-sky-500" /> Remember me
                                 </label>

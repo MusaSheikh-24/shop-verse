@@ -80,7 +80,7 @@ export default function ProductCard({ product, view = "grid" }: { product: Produ
                 <span className="absolute bottom-3 left-3 rounded-full bg-rose-500 px-2.5 py-1 text-[10px] font-extrabold text-white shadow-lg transition-opacity duration-300 group-hover:opacity-0">-{product.discount}%</span>
                 <button
                     onClick={() => addToCart(product)}
-                    className="absolute inset-x-3 bottom-3 flex translate-y-[150%] items-center justify-center gap-2 rounded-xl bg-linear-to-r from-sky-500 to-blue-600 py-2.5 text-sm font-bold text-white shadow-xl shadow-sky-300 transition-transform duration-300 group-hover:translate-y-0 active:scale-95"
+                    className="absolute inset-x-3 bottom-3 flex translate-y-0 items-center justify-center gap-2 rounded-xl bg-linear-to-r from-sky-500 to-blue-600 py-2.5 text-sm font-bold text-white shadow-xl shadow-sky-300 transition-transform duration-300 active:scale-95 lg:translate-y-[150%] lg:group-hover:translate-y-0"
                 >
                     <ShoppingCart className="size-4" /> Add to Cart
                 </button>

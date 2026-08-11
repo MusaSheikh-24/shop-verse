@@ -92,7 +92,7 @@ export default function ContactPage() {
                         <div className="absolute -inset-3 rounded-[2.5rem] bg-linear-to-br from-sky-200/50 to-blue-200/50 blur-2xl" />
                         <form
                             onSubmit={handleSubmit}
-                            className="relative rounded-[2rem] border-2 border-sky-100 bg-white p-8 shadow-[0_30px_80px_-20px_rgba(2,132,199,0.35)] sm:p-10"
+                            className="relative rounded-[2rem] border-2 border-sky-100 bg-white p-6 shadow-[0_30px_80px_-20px_rgba(2,132,199,0.35)] sm:p-10"
                         >
                             <div className="grid gap-5 sm:grid-cols-2">
                                 <div>

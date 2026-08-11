@@ -95,12 +95,12 @@ export default function ProductDetailPage() {
             <main className="relative z-10 mx-auto max-w-7xl px-4 pb-32 pt-28 sm:px-6 lg:px-8">
 
                 {/* Breadcrumbs */}
-                <nav className="mb-8 flex items-center gap-2 text-xs font-medium text-slate-500">
+                <nav className="mb-8 flex items-center gap-2 overflow-x-auto text-xs font-medium whitespace-nowrap text-slate-500 scrollbar-none [&::-webkit-scrollbar]:hidden">
                     <Link href="/" className="transition-colors hover:text-sky-600">Home</Link>
-                    <ChevronRight className="size-3" />
+                    <ChevronRight className="size-3 shrink-0" />
                     <Link href="/shop" className="transition-colors hover:text-sky-600">Shop</Link>
-                    <ChevronRight className="size-3" />
-                    <span className="font-semibold text-slate-900">{product.name}</span>
+                    <ChevronRight className="size-3 shrink-0" />
+                    <span className="truncate font-semibold text-slate-900">{product.name}</span>
                 </nav>
 
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
@@ -178,7 +178,7 @@ export default function ProductDetailPage() {
 
                         {/* Price Section */}
                         <div className="mb-8 flex items-end gap-4 border-b border-slate-100 pb-8">
-                            <span className="text-5xl font-black tracking-tight text-slate-900">${product.price}</span>
+                            <span className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">${product.price}</span>
                             <div className="mb-2 flex flex-col">
                                 <span className="text-lg font-medium text-slate-400 line-through">${product.old}</span>
                                 <span className="text-xs font-bold text-emerald-600">Save ${product.old - product.price}</span>
@@ -234,30 +234,32 @@ export default function ProductDetailPage() {
                         </div>
 
                         {/* Trust Badges Grid */}
-                        <div className="mt-10 grid grid-cols-3 gap-4 rounded-3xl bg-slate-50 p-6">
+                        <div className="mt-10 grid grid-cols-1 gap-4 rounded-3xl bg-slate-50 p-6 sm:grid-cols-3">
                             {[
                                 { icon: Truck, label: "Free Shipping", sub: "On orders over $50" },
                                 { icon: ShieldCheck, label: "2 Year Warranty", sub: "Full coverage" },
                                 { icon: RefreshCw, label: "30 Days Return", sub: "Money back guarantee" },
                             ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center text-center">
-                                    <div className="mb-3 grid size-12 place-items-center rounded-full bg-white text-sky-600 shadow-sm">
+                                <div key={i} className={`flex items-center gap-4 text-left sm:flex-col sm:items-center sm:text-center ${i > 0 ? "border-t border-slate-200 pt-4 sm:border-0 sm:pt-0" : ""}`}>
+                                    <div className="mb-0 grid size-12 shrink-0 place-items-center rounded-full bg-white text-sky-600 shadow-sm sm:mb-3">
                                         <item.icon className="size-6" />
                                     </div>
-                                    <span className="text-xs font-bold text-slate-900">{item.label}</span>
-                                    <span className="text-[10px] text-slate-500">{item.sub}</span>
+                                    <div>
+                                        <span className="block text-xs font-bold text-slate-900">{item.label}</span>
+                                        <span className="block text-[10px] text-slate-500">{item.sub}</span>
+                                    </div>
                                 </div>
                             ))}
                         </div>
 
                         {/* Accordion / Tabs Section */}
                         <div className="mt-12">
-                            <div className="flex gap-2 border-b border-slate-200">
+                            <div className="flex gap-2 overflow-x-auto border-b border-slate-200 scrollbar-none [&::-webkit-scrollbar]:hidden">
                                 {tabs.map((tab) => (
                                     <button
                                         key={tab.id}
                                         onClick={() => setActiveTab(tab.id)}
-                                        className={`relative px-6 py-4 text-sm font-bold transition-colors ${activeTab === tab.id ? "text-sky-600" : "text-slate-500 hover:text-slate-800"
+                                        className={`relative shrink-0 px-6 py-4 text-sm font-bold transition-colors ${activeTab === tab.id ? "text-sky-600" : "text-slate-500 hover:text-slate-800"
                                             }`}
                                     >
                                         {tab.label}
@@ -356,7 +358,7 @@ export default function ProductDetailPage() {
             </main>
 
             {/* Mobile Sticky Add-to-Cart Bar */}
-            <div className={`fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white/90 p-4 backdrop-blur-lg transition-transform duration-300 lg:hidden ${isScrolled ? "translate-y-0" : "translate-y-full"}`}>
+            <div className={`fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white/90 p-4 pb-[max(1rem,env(safe-area-inset-bottom))] backdrop-blur-lg transition-transform duration-300 lg:hidden ${isScrolled ? "translate-y-0" : "translate-y-full"}`}>
                 <div className="flex items-center justify-between gap-4">
                     <div>
                         <p className="text-xs text-slate-500">Total Price</p>

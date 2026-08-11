@@ -218,7 +218,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* ===== CTA ===== */}
-                    <div className="relative mt-24 overflow-hidden rounded-[2.5rem] bg-linear-to-r from-sky-500 via-blue-600 to-indigo-600 p-12 text-center shadow-2xl shadow-sky-300">
+                    <div className="relative mt-24 overflow-hidden rounded-[2.5rem] bg-linear-to-r from-sky-500 via-blue-600 to-indigo-600 p-8 text-center shadow-2xl shadow-sky-300 sm:p-12">
                         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.06)_1px,transparent_1px)] bg-size-[44px_44px]" />
                         <Sparkles className="pointer-events-none absolute left-10 top-8 size-6 animate-pulse text-white/30" />
                         <Sparkles className="pointer-events-none absolute bottom-8 right-12 size-5 animate-pulse text-white/30" style={{ animationDelay: "1s" }} />
