@@ -107,8 +107,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                     <span className="ml-auto size-2 shrink-0 rounded-full bg-emerald-400 ring-4 ring-emerald-400/15" />
                 </div>
 
-                {/* Nav — fits without scrolling on standard heights */}
-                <nav className="relative flex-1 overflow-hidden px-4 pb-4">
+                {/* Nav — scrolls with a hidden scrollbar on short screens */}
+                <nav className="no-scrollbar relative flex-1 overflow-y-auto px-4 pb-4">
                     <div className="space-y-4">
                         {navGroups.map((group) => (
                             <div key={group.label}>

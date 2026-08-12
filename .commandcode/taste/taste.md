@@ -5,4 +5,4 @@
 # ui
 
 - Mobile navbar should display the Sign-In button (currently hidden below `lg` breakpoint), and the sign-in page should be fully responsive in mobile view. Confidence: 0.60
-- For the admin panel: use less bold headings (avoid `font-black`/`font-extrabold` overuse), a professional unique sidebar design with no visible scrollbar. Confidence: 0.70
+- For the admin panel: use less bold headings (avoid `font-black`/`font-extrabold` overuse), a professional unique sidebar design with no visible scrollbar (scrollable via overflow-y-auto with a hidden-scrollbar utility). Confidence: 0.75
